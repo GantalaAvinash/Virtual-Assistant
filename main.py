@@ -140,12 +140,6 @@ if __name__ == "__main__":
             codePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
             os.startfile(codePath)
 
-        elif (["search for"]) and 'youtube' not in query:
-            search_term = query.split("for")[-1]
-            url = "https://google.com/search?q=" + search_term
-            webbrowser.get().open(url)
-            speak("Here is what I found for" + search_term + "on google")
-
         elif 'email to harry' in query:
             try:
                 speak("What should I say?")
@@ -159,3 +153,9 @@ if __name__ == "__main__":
         elif 'bye' in query:
             speak('Ok Sir, Bye')
             break
+        
+        elif (["search for"]) and 'youtube' not in query:
+            search_term = query.split("for")[-1]
+            url = "https://google.com/search?q=" + search_term
+            webbrowser.get().open(url)
+            speak("Here is what I found for" + search_term + "on google")
